@@ -1,6 +1,6 @@
 
 module "network-security-group" {
-  source                = "git::https://github.com/Azure/terraform-azurerm-network-security-group?ref=v4.1.0"
+  source                = "git::https://github.com/Azure/terraform-azurerm-network-security-group"
   resource_group_name   = "rg-dev-eastus-uclides-01"
   location              = "EastUS" # Optional; if not provided, will use Resource Group location
   security_group_name   = "nsg"
