@@ -1,7 +1,10 @@
 
+variable "rg_name" {
+  type = string
+}
 module "network-security-group" {
   source                = "git::https://github.com/Azure/terraform-azurerm-network-security-group"
-  resource_group_name   = "rg-dev-eastus-uclides-01"
+  resource_group_name   = var.rg_name
   location              = "EastUS" # Optional; if not provided, will use Resource Group location
   security_group_name   = "nsg"
   source_address_prefix = ["10.0.3.0/24"]
